@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+        <TextView
+            android:id="@+id/tvLabelPontos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30sp"
+            android:text="Pontos por Clique 15"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btRed"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:text="Clique Aqui"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelPontos" />
+
+        <TextView
+            android:id="@+id/tvLabelQtdPontos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pontos:"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/btRed"
+            app:layout_constraintTop_toBottomOf="@id/btRed" />
+
+        <TextView
+            android:id="@+id/tvPontos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="0"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/tvLabelQtdPontos"
+            app:layout_constraintTop_toBottomOf="@id/btRed" />
+
+        <TextView
+            android:id="@+id/tvLabelQtdCliques"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cliques:"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/btRed"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelQtdPontos" />
+
+        <TextView
+            android:id="@+id/tvCliques"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="0"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@id/tvLabelQtdPontos"
+            app:layout_constraintTop_toBottomOf="@id/tvLabelQtdPontos" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
