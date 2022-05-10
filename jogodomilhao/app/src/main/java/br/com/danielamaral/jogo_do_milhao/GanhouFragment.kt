@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
+import androidx.navigation.findNavController
+import br.com.danielamaral.jogo_do_milhao.databinding.FragmentGanhouBinding
 
 
 class GanhouFragment : Fragment() {
@@ -14,8 +17,16 @@ class GanhouFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ganhou, container, false)
+        val bindingGanhou: FragmentGanhouBinding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_ganhou, container, false)
+        bindingGanhou.btJogarDeNovo.setOnClickListener {
+            jogarDeNovo()
+        }
+        return bindingGanhou.root
+    }
+
+    private fun jogarDeNovo() {
+        view?.findNavController()?.navigate(R.id.action_ganhouFragment_to_jogoFragment)
     }
 
 }
