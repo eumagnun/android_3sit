@@ -18,7 +18,7 @@ class Database {
             perguntas.add(Pergunta(perguntaA, listaRespostasA))
 
             val perguntaB = "Qual a melhor banda do mundo?"
-            val respostaB1 = Resposta("Could Play", false)
+            val respostaB1 = Resposta("Coldplay", false)
             val respostaB2 = Resposta("Metallica", true)
             val respostaB3 = Resposta("Chiclete com Banana", false)
             val listaRespostasB = listOf(respostaB1, respostaB2, respostaB3)

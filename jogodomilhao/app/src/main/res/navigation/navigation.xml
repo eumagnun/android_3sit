@@ -34,9 +34,11 @@
         android:label="JogoFragment" >
         <action
             android:id="@+id/action_jogoFragment_to_perdeuFragment"
-            app:destination="@id/perdeuFragment" />
+            app:destination="@id/perdeuFragment"
+            app:popUpTo="@id/homeFragment" />
         <action
             android:id="@+id/action_jogoFragment_to_ganhouFragment"
-            app:destination="@id/ganhouFragment" />
+            app:destination="@id/ganhouFragment"
+            app:popUpTo="@id/homeFragment" />
     </fragment>
 </navigation>
